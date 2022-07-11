@@ -1,3 +1,17 @@
-#!/bin/sh -l
+name: "Hello Actions"
+description: "Greet someone"
+author: "octocat@github.com"
 
-sh -c "echo Hello world my name is $INPUT_MY_NAME"
+inputs:
+  MY_NAME:
+    description: "Who to greet"
+    required: true
+    default: "World"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "purple"
